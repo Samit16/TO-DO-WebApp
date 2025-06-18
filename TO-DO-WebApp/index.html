@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 My Ultimate To-Do List</h1>
+    <div class="input-area">
+      <input type="text" id="taskinput" placeholder="What needs to be done?"/>
+      <button onclick="addTask()">Add Task</button>
+    </div>
+    <div class="actions">
+      <button onclick="setFilter('all')">All</button>
+      <button onclick="setFilter('pending')">Pending</button>
+      <button onclick="setFilter('completed')">Completed</button>
+      <button onclick="clearAll()">Clear All</button>
+      <button onclick="toggleDarkMode()">🌙</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
