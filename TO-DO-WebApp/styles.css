@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e6ba81;
+    color: #333; 
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 500px;
+    margin: 600px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;   
+}
+
+.input-area{
+    display: flex;
+    gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.input-area button {
+    padding: 10px;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.actions {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.actions button {
+  padding: 8px 12px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #eee;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  position: relative;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-btn {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  margin-top: 6px;
+}
+
+.dark {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.dark .container {
+    background-color: #2c2c2c;
+}
+
+.dark input, .dark li {
+    background-color: #3a3a3a;
+    color: #f5f5f5;
+}
+
