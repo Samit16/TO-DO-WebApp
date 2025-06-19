@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Nunito Sans', sans-serif; /* Added a more modern font */
 }
 
 body {
-  background: #f7f2e7;
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,9 +16,10 @@ body {
 .container {
   background-color: white;
   width: 350px;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem; /* Increased padding */
+  border-radius: 15px; /* Slightly smaller border radius */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  text-align: center; /* Center align content */
 }
 
 h1 {
@@ -26,9 +27,7 @@ h1 {
   margin-bottom: 1.5rem;
   color: #222;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-weight: 700; /* Bold font weight */
 }
 
 h1::before {
@@ -45,20 +44,21 @@ h1::before {
 
 input[type="text"] {
   flex: 1;
-  padding: 0.6rem 0.8rem;
-  border: 2px solid #ccc;
+  padding: 0.8rem 1rem; /* Increased padding */
+  border: 1px solid #ddd; /* Lighter border */
   border-radius: 8px;
   font-size: 1rem;
+  outline: none; /* Remove default outline */
 }
 
 button {
-  background-color: #007bff;
+  background-color: #2575fc; /* Updated button color */
   color: white;
   border: none;
-  padding: 0.6rem 1rem;
+  padding: 0.8rem 1.5rem; /* Increased padding */
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease; /* Smooth transition */
   font-weight: 500;
 }
 
@@ -75,10 +75,11 @@ button:hover {
 }
 
 .filters button {
-  background-color: #f2f2f2;
+  background-color: #e0e0e0; /* Lighter filter button color */
   color: #333;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem; /* Increased padding */
   border-radius: 6px;
+  border: none; /* Removed border */
   border: 1px solid #ddd;
 }
 
@@ -92,13 +93,14 @@ button:hover {
 
 .task {
   padding: 0.6rem 0.8rem;
-  background-color: #fafafa;
-  border: 1px solid #e0e0e0;
+  background-color: #ffffff; /* White background for tasks */
+  border: 1px solid #eee; /* Lighter border */
   border-radius: 6px;
   margin-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* subtle shadow for tasks */
 }
 
 .task.completed {
@@ -106,4 +108,13 @@ button:hover {
   color: #aaa;
 }
 
+@media (max-width: 400px) {
+  .container {
+    width: 95%; /* Make container nearly full width on small screens */
+    padding: 1.5rem; /* Reduce padding */
+  }
 
+  .input-section {
+    flex-direction: column; /* Stack input and button on small screens */
+  }
+}
