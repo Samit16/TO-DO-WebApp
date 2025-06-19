@@ -1,71 +1,53 @@
-let tasks = JSON.parse(localStorage.getItem("task")) || [];
-let filter ="all";
+let tasks = [];
 
 function addTask() {
-    const input =document.getElementById("taskInput");
-    const text= input.value.trim();
-    if (!text) return;
+  const input = document.getElementById("taskInput");
+  const taskText = input.value.trim();
 
-    const task={
-        text,
-        completed: false,
-        createdAt: new Date().toLocaleString()
-    };
+  if (taskText === "") return;
 
-    tasks.push(task);
-    input.value="";
-    saveAndRender();
+  tasks.push({ text: taskText, completed: false });
+  input.value = "";
+  renderTasks();
 }
 
-function deleteTask(index) {
-  tasks.splice(index, 1);
-  saveAndRender();
+function renderTasks(filter = "all") {
+  const taskList = document.getElementById("taskList");
+  taskList.innerHTML = "";
+
+  let filteredTasks = tasks;
+  if (filter === "pending") {
+    filteredTasks = tasks.filter(task => !task.completed);
+  } else if (filter === "completed") {
+    filteredTasks = tasks.filter(task => task.completed);
+  }
+
+  filteredTasks.forEach((task, index) => {
+    const div = document.createElement("div");
+    div.className = "task" + (task.completed ? " completed" : "");
+    div.innerHTML = `
+      <span onclick="toggleTask(${index})">${task.text}</span>
+      <button onclick="deleteTask(${index})">🗑️</button>
+    `;
+    taskList.appendChild(div);
+  });
 }
 
 function toggleTask(index) {
   tasks[index].completed = !tasks[index].completed;
-  saveAndRender();
-}
-
-function clearAll() {
-  if (confirm("Clear all tasks?")) {
-    tasks = [];
-    saveAndRender();
-  }
-}
-
-function setFilter(f) {
-  filter = f;
-  saveAndRender();
-}
-
-function toggleDarkMode() {
-  document.body.classList.toggle("dark");
-}
-
-function saveAndRender() {
-  localStorage.setItem("tasks", JSON.stringify(tasks));
   renderTasks();
 }
 
-function renderTasks() {
-  const list = document.getElementById("taskList");
-  list.innerHTML = "";
-
-  tasks.forEach((task, index) => {
-    if (filter === "completed" && !task.completed) return;
-    if (filter === "pending" && task.completed) return;
-
-    const li = document.createElement("li");
-    li.className = task.completed ? "completed" : "";
-    li.onclick = () => toggleTask(index);
-    li.innerHTML = `
-      ${task.text}
-      <span class="timestamp">${task.createdAt}</span>
-      <button class="delete-btn" onclick="event.stopPropagation(); deleteTask(${index})">✖</button>
-    `;
-    list.appendChild(li);
-  });
+function deleteTask(index) {
+  tasks.splice(index, 1);
+  renderTasks();
 }
 
-renderTasks();
+function clearAll() {
+  tasks = [];
+  renderTasks();
+}
+
+function filterTasks(type) {
+  renderTasks(type);
+}
