@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto Price Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Crypto Price Tracker</h1>
+    
+    <div class="input-section">
+      <select id="coinDropdown">
+      <option value="Bitcoin">Bitcoin</option>
+      <option value="Ethereum">Ethereum</option>
+      <option value="Solana">Solana</option>
+      <option value="Dogecoin">Dogecoin</option>
+      <option value="Litecoin">Litecoin</option>
+      <option value="Ripple">Ripple</option>
+      </select>
+      <button onclick="fetchPrice()">Get Price</button>
+    </div>
+    <div id="result" class="result-card"></div>
+    <canvas id="priceChart" width="400" height="200"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
