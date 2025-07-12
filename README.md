@@ -15,7 +15,7 @@ Welcome to my very first web project! This is a sleek and fully functional **To-
 ## 🎯 Features
 
 - ✅ Add, complete, and delete tasks
-- 📌 Filter by `All`, `Pending`, or `Completed`
+- 📌 Filter by `All`, `Pending`, and `Completed`
 - 🧹 Clear all tasks with one click
 - 🧠 Click to mark tasks as done
 - ✨ Clean modern UI with responsive layout
@@ -61,4 +61,3 @@ Welcome to my very first web project! This is a sleek and fully functional **To-
 > Made by Samit.
 - **Github:** [Samit16](https://github.com/Samit16)
 ---
---- 
