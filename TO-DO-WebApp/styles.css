@@ -6,32 +6,42 @@
 }
 
 body {
-  background: linear-gradient(to right, #8d041f, #e02c4a); /* Gradient background */
+  margin: 0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  background: radial-gradient(circle at 20% 20%, #000000 0%, transparent 40%),
+              radial-gradient(circle at 80% 40%, #a85a3c 0%, transparent 60%), /* darker peach */
+              radial-gradient(circle at 60% 80%, #240a49 0%, #922e47 50%, #c76c4f 80%), /* darker violet-pink-orange blend */
+              linear-gradient(135deg, #010101 0%, #0e0a1a 50%, #120634 100%); /* deeper base tones */
+  background-blend-mode: screen;
+  font-family: 'Helvetica', sans-serif;
 }
 
+
 .container {
-  background: ;
+  background: radial-gradient(circle, rgba(62, 120, 190, 0.6) 100%, rgba(26, 42, 64, 0.4) 50%, rgba(1, 29, 88, 0.6) 100%);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 2.5rem;
   width: 350px;
-  padding: 2.5rem; /* Increased padding */
-  border-radius: 25px; /* Slightly smaller border radius */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Stronger shadow */
-  text-align: center; /* Center align content */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 
 h1 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #222;
+  color: #030303;
   text-align: center;
   font-weight: 700; /* Bold font weight */
 }
 
 h1::before {
-  content: "📝";
   font-size: 2rem;
   margin-bottom: 0.4rem;
 }
@@ -45,14 +55,14 @@ h1::before {
 input[type="text"] {
   flex: 1;
   padding: 0.8rem 1rem; /* Increased padding */
-  border: 1px solid #ddd; /* Lighter border */
+  border: 1px solid #89a4f0; /* Lighter border */
   border-radius: 8px;
   font-size: 1rem;
   outline: none; /* Remove default outline */
 }
 
 button {
-  background-color: #2575fc; /* Updated button color */
+  background-color: #0c63f8; /* Updated button color */
   color: white;
   border: none;
   padding: 0.8rem 1.5rem; /* Increased padding */
@@ -75,12 +85,12 @@ button:hover {
 }
 
 .filters button {
-  background-color: #e0e0e0; /* Lighter filter button color */
-  color: #333;
+  background-color: #f8f6f6; /* Lighter filter button color */
+  color: #222222;
   padding: 0.6rem 1.2rem; /* Increased padding */
   border-radius: 6px;
   border: none; /* Removed border */
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
 }
 
 .filters button:hover {
