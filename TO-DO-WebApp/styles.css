@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Nunito Sans', sans-serif; /* Added a more modern font */
+  font-family: 'Helvetica'; /* Added a more modern font */
 }
 
 body {
-  background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+  background: linear-gradient(to right, #8d041f, #e02c4a); /* Gradient background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,11 +14,11 @@ body {
 }
 
 .container {
-  background-color: white;
+  background: ;
   width: 350px;
   padding: 2.5rem; /* Increased padding */
-  border-radius: 15px; /* Slightly smaller border radius */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  border-radius: 25px; /* Slightly smaller border radius */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Stronger shadow */
   text-align: center; /* Center align content */
 }
 
