@@ -6,12 +6,6 @@ Welcome to my very first web project! This is a sleek and fully functional **To-
 
 ---
 
-## 🔗 Live Demo
-
-👉 [Click here to try it live](http://127.0.0.1:5500/TO-DO-WebApp/index.html)
-
----
-
 ## 🎯 Features
 
 - ✅ Add, complete, and delete tasks
